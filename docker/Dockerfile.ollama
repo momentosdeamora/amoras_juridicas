@@ -1,0 +1,13 @@
+FROM ollama/ollama:0.40.16@sha256:910d0d8107b538fb0894e63163eb195de0cc7aefcbc666dc62d3b18f71124592
+USER root
+RUN groupadd --gid 10001 farolmodel \
+    && useradd --uid 10001 --gid 10001 --create-home farolmodel \
+    && mkdir -p /models && chown 10001:10001 /models
+ENV OLLAMA_HOST=0.0.0.0:11434 OLLAMA_MODELS=/models \
+    OLLAMA_NO_CLOUD=1 OLLAMA_NUM_PARALLEL=1 \
+    OLLAMA_MAX_LOADED_MODELS=1 OLLAMA_CONTEXT_LENGTH=8192
+COPY docker/pull-model.sh /usr/local/bin/pull-farol-model
+RUN chmod 0555 /usr/local/bin/pull-farol-model
+USER 10001:10001
+ENTRYPOINT ["/bin/ollama"]
+CMD ["serve"]

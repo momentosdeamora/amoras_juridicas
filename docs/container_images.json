@@ -1,0 +1,10 @@
+[
+  {
+    "image": "python:3.14-slim",
+    "digest": "sha256:9aaa474097d094040649f2162a627c0049b408f52138d980916788d80f04802f"
+  },
+  {
+    "image": "ollama/ollama:0.40.16",
+    "digest": "sha256:910d0d8107b538fb0894e63163eb195de0cc7aefcbc666dc62d3b18f71124592"
+  }
+]

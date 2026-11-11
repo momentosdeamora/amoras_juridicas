@@ -1,0 +1,23 @@
+[project]
+name = "amoras-juridicas"
+version = "0.2.0"
+description = "Laboratório jurídico local com Ollama, evidências rastreáveis e dados sintéticos"
+requires-python = ">=3.12,<3.15"
+license = "MIT"
+readme = "README.md"
+dependencies = []
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.4,<10"
+pyyaml = ">=6.0,<7"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[build-system]
+requires = ["poetry-core>=2.2,<3"]
+build-backend = "poetry.core.masonry.api"

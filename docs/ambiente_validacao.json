@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-11-11T02:28:41+00:00",
+  "poetry": "2.2.1",
+  "virtualenv_ready": true,
+  "lock_sha256": "0dcd923fb75e24128e1b6b171a5af60055748e0a8bda56b6b9086468040599bd",
+  "tests": 118,
+  "subtests": 9,
+  "compose": "validated with Docker Compose v2.40.3",
+  "container_build": "not_run_engine_unavailable",
+  "container_runtime": "not_run_engine_unavailable",
+  "docker_engine_available": false,
+  "local_runtime_verified": "virtualenv",
+  "local_authentication_verified": true,
+  "chat_http_verified": [
+    "register",
+    "create corpus conversation",
+    "send",
+    "receive response",
+    "confirmed delete"
+  ],
+  "secret_file_mode": "0o600",
+  "authentication": "SQLite accounts, scrypt password hashes, opaque revocable sessions",
+  "roles": [
+    "gestor",
+    "advogado",
+    "comercial",
+    "financeiro",
+    "ti"
+  ],
+  "role_enforcement": "server-side pages, forms, case portfolio and exports",
+  "periodic_collector": "simulated snapshots every 60 seconds; deduplication verified",
+  "operational_triage": "responsible person and human checklist; no legal deadline decision",
+  "agent_comparison": "independent native Ollama vs fixed local flow; synthetic CASO-002; see comparacao_agente_fluxo_fixo.json",
+  "chat_management": "manual rename; confirmed atomic bulk deletion; multi-process context; deletion during inference tested",
+  "chat_scopes": "explicit selection: corpus, processes only, or both; legacy general histories retained",
+  "account_self_service": "display name and password only; current password required for password change; previous sessions revoked",
+  "help_pages": "Como usar o site and Minha conta verified over authenticated HTTP",
+  "structured_chat_demonstrations": [
+    "source-grounded summary",
+    "phase-aware petition outline",
+    "operational triage",
+    "document and chronology check"
+  ],
+  "structured_demo_engine": "deterministic templates over current quarantined sources; not attributed to LLM"
+}
